@@ -1,3 +1,9 @@
-- Spring3.2 + SpringMVC3.2 + Mybitas3.1
-- JDK1.8 + eclipse Oxygen + tomcat8.5 + Mysql5.7.20
-- Simplest
+- bitcoin - WebSocket + QRCode练习项目
+- mq-activemq - 练习项目
+- mq-rabbitmq - 练习项目
+- myBootStrap - BootStrap练习项目
+- myLucene - Lucene练习项目
+- mySpringBoot - springboot练习项目
+- mySSM - Spring3.2 + SpringMVC3.2 + Mybitas3.1练习项目
+- myStrus - 类Struts，简单实现的MVC框架
+- spring-redis - spring与redis集成

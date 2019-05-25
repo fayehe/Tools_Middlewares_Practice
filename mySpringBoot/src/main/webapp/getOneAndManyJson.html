@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>用AJAX以JSON方式获取数据</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+    <input type="button" value="通过AJAX获取一个Hero对象---" id="sender">
+    <div id="messageDiv"></div>
+
+    <script>
+        $('#sender').click(function(){
+            var url="categoryJson/10";
+            $.get(url, function(data) {
+                    console.log(data);
+                    console.log(JSON.stringify(data));
+                    var json=data;
+                    var name =json.name;
+                    var id = json.id;
+                    $("#messageDiv").html("分类id："+ id + "<br>分类名称:" +name );
+            });
+        });
+    </script>
+
+
+    <input type="button" value="通过AJAX获取多个分类对象" id="sender2">
+    <div id="messageDivs"></div>
+    <script>
+        $('#sender2').click(function(){
+            var url="categoryJson?start=0&size=100";
+            $.get(
+                url,
+                function(data) {
+                    var categorys = data;
+                    console.log(data);
+                    for(i in categorys){
+                        var old = $("#messageDivs").html();
+                        var category = categorys[i];
+                        $("#messageDivs").html(old + "<br>"+category.id+"   -----   "+category.name);
+                    }
+                });
+        });
+    </script>
+</body>
+</html>

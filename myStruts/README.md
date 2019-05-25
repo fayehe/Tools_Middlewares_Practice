@@ -1,0 +1,1 @@
+- A simple MVC framwork accroding Struts

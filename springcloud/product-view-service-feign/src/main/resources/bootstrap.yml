@@ -1,0 +1,25 @@
+# 作为配置客户端，比较。。。特别~ 它需要在 bootstrap.yml 里配置 config-server的信息，而不是像以前那样在 application.yml 里进行配置。
+# bootstrap.yml 和 application.yml 的区别，简单说就是前者先启动，并且一些系统方面的配置需要在 bootstrap.yml 里进行配置。 更多关于他们的区别，请自行百度。
+# 在 bootstrap.yml 里配置提供了 serviceId: config-server, 这个是配置服务器在 eureka server 里的服务名称，这样就可以定位 config-server了。
+
+spring:
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled:  true
+        serviceId:  config-server
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  client:
+    serviceUrl:
+      defaultZone:  http://localhost:8761/eureka/
+  
+rabbitmq: 
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest      

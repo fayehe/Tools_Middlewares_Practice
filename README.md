@@ -7,3 +7,6 @@
 - mySSM - Spring3.2 + SpringMVC3.2 + Mybitas3.1练习项目
 - myStrus - 类Struts，简单实现的MVC框架
 - spring-redis - spring与redis集成
+
+- product-service - 单体项目，未拆分前springcloud项目的原本
+- springcloud - springcloud分布式练习项目

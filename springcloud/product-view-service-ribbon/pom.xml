@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cn.how2j.springcloud</groupId>
+    <artifactId>springcloud</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>product-view-service-ribbon</artifactId>
+  
+  
+    <dependencies>
+    	<!-- 
+    	spring-cloud-starter-netflix-eureka-client: eureka 客户端
+		spring-boot-starter-web： springmvc
+		spring-boot-starter-thymeleaf： thymeleaf 做服务端渲染
+		
+		有同学就会问了，为什么不用前后端分离呢？ 干嘛要用 thymeleaf 做服务端渲染呢？
+		原因如下：
+		1. 使用前后端分离，站长多半会用 vue.js + axios.js来做，就像 springboot 天猫教程那样。 如果学习者没有这个基础，就会加重学习的负担。
+		2. 使用前后端分离，是走的 http 协议， 那么就无法演示重要的 微服务端调用了，所以站长这里特意没有用前后端分离，以便于大家观察和掌握微服务的彼此调用 
+		-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+		<dependency>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+    </dependencies>  
+  
+</project>

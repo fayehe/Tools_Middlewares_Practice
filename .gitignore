@@ -3,3 +3,8 @@
 */bin/
 */.settings/
 */.classpath
+*/.idea/
+*.iml
+/springcloud/*/target/
+/springcloud/*/.settings/
+/springcloud/*/.classpath

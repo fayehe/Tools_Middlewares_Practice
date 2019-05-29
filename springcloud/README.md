@@ -1,0 +1,13 @@
+- 微服务：
+	- eureka-server: 8761 - 服务注册中心
+	- product-data-service: 8001,8002,8003 - 数据微服务
+	- product-view-service-ribbon: 8010 - 视图微服务（ribbon方式）
+	- product-view-service-feign: 8012, 8013, 8014 - 视图微服务（feign方式）
+	- hystrix-dashboard: 8020 - 断路器监控微服务（未注册到服务注册中心）
+	- turbine: 8021 - 断路器聚合监控微服务
+	- config-server: 8030 - 配置微服务
+	- zuul: 8040 - 网管Zuul微服务
+- 第三方
+	- springcloudConfig： 配置文件项目
+	- zipkin: 9411 - 服务链路追踪
+	- rabbitMQ: 5672 - 消息总线BUS

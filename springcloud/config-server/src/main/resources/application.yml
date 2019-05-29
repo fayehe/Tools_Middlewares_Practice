@@ -10,8 +10,8 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/fayehe/springcloudConfig/
-          searchPaths: respo
+          uri: https://github.com/fayehe/Tools_Middlewares_Practice
+          searchPaths: springcloud/springcloudConfig/respo
 eureka:
   client:
     serviceUrl:

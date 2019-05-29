@@ -42,9 +42,14 @@
 	        <artifactId>spring-boot-starter-actuator</artifactId>
 	    </dependency>    
 	    <dependency> <!-- 用于支持 rabbitmq -->
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
 	    </dependency> 
+	    
+	    <dependency> <!-- 增加 jar spring-cloud-starter-netflix-hystrix 以支持断路器。 -->
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+	    </dependency>
 		        
     </dependencies>  
   

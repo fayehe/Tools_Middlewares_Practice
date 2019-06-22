@@ -1,1 +1,5 @@
 - A simple MVC framwork accroding Struts
+- 1. 从web.xml中拦截所有的.action请求，到ActionServlet（核心拦截类）
+- 2. 通过dom4j读取配置文件（mystruts.xml）并转化为ActionMapping对象，从中找到映射的action类和方法
+- 3. 在ActionServlet中通过反射创建新的对象并调用方法，返回flag
+	- 多例 - 每次请求都会创建一个新的实例对象，类级别的拦截

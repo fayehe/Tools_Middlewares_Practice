@@ -44,7 +44,7 @@ public class ActionServlet extends HttpServlet{
 			
 			//3. 反射： 创建对象 调用方法，获取返回值
 			Class<?> clazz = Class.forName(className);
-			Object obj = clazz.newInstance();  //LoginAction loginAction = new LoginAction();
+			Object obj = clazz.newInstance();  //LoginAction loginAction = new LoginAction(); 多例 - 线程安全
 			Method m = clazz.getDeclaredMethod(method, HttpServletRequest.class,HttpServletResponse.class );
 			String returnFlag =  (String) m.invoke(obj, request, response);
 			

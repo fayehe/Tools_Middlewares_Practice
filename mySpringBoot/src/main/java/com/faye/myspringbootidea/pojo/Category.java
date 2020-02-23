@@ -3,11 +3,12 @@ package com.faye.myspringbootidea.pojo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "category_")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"}) // 这两个属性不进行json的转化
-public class Category {
+public class Category implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

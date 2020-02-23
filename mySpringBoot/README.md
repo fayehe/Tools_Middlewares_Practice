@@ -4,3 +4,4 @@
 - globel exception handler; 端口和上下文路径; 配置切换
 - 对持久层支持; CURD + 分页
 - 上传文件 + Restful + JSON
+- Redis集成（数据缓存 + session共享）

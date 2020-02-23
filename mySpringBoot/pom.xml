@@ -29,10 +29,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
             <exclusions>
-                <exclusion> <!--以避免和独立 tomcat 容器的冲突.-->
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
+<!--                <exclusion> &lt;!&ndash;以避免和独立 tomcat 容器的冲突.&ndash;&gt;-->
+<!--                    <groupId>org.springframework.boot</groupId>-->
+<!--                    <artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--                </exclusion>-->
             </exclusions>
         </dependency>
 
@@ -41,14 +41,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<!--spring-boot-starter-tomcat修改为 provided方式，以避免和独立 tomcat 容器的冲突.
-			表示provided 只在编译和测试的时候使用，打包的时候就没它了。-->
-		<!--<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			&lt;!&ndash;<scope>provided</scope>&ndash;&gt;
-		</dependency>-->
 
 		<!-- servlet & jstl &tomacat依赖. -->
 		<dependency>
@@ -90,6 +82,18 @@
             <version>1.3.0</version>
         </dependency>-->
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-data-redis</artifactId>
+		</dependency>
     </dependencies>
 
 	<build>

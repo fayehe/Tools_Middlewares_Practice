@@ -12,6 +12,7 @@ import cn.how2j.springcloud.pojo.Product;
 
 //增加fallback = ProductClientFeignHystrix.class，这就表示，如果访问的 PRODUCT-DATA-SERVICE 不可用的话，就调用 ProductClientFeignHystrix 来进行反馈信息。
 @FeignClient(value = "PRODUCT-DATA-SERVICE", fallback = ProductClientFeignHystrix.class)
+//@FeignClient(value = "PRODUCT-DATA-SERVICE")
 public interface ProductClientFeign {
 
 	@GetMapping("/products")

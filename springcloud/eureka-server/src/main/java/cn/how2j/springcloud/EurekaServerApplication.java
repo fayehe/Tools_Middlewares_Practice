@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import cn.hutool.core.util.NetUtil;
 
 /**
- * EurekaServer 启动类。
+ * EurekaServer 启动类。 - 服务发现
 	这是一个 EurekaServer ，它扮演的角色是注册中心，用于注册各种微服务，以便于其他微服务找到和访问。 所以 Eureka 这个单词是 “找到啦” 的意思。
 	EurekaServer 本身就是个 Springboot 微服务, 所以它有 @SpringBootApplication 注解。
 	@EnableEurekaServer 表示这是个 EurekaServer 。

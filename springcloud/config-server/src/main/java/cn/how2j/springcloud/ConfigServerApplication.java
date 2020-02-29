@@ -20,6 +20,5 @@ public class ConfigServerApplication {
     		System.exit(1);
     	}
         new SpringApplicationBuilder(ConfigServerApplication.class).properties("server.port=" + port).run(args);
-	
 	}
 }

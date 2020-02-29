@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import cn.how2j.springcloud.pojo.Product;
 import cn.how2j.springcloud.service.ProductService;
- 
+
+// 控制类，把 Product 集合转换成 json 数组。
 @RestController
-public class ProductController {//控制类，把 Product 集合转换成 json 数组。
+public class ProductController {
  
 	@Autowired ProductService productService;
 	

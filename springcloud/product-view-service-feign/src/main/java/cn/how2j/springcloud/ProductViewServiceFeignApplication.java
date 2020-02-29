@@ -23,8 +23,8 @@ import cn.hutool.core.util.NumberUtil;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
-@EnableFeignClients
-@EnableCircuitBreaker //以使得它可以把信息共享给监控中心。 
+@EnableFeignClients //  表示用于使用Feign方式（客户端负载均衡）。
+@EnableCircuitBreaker //以使得它可以把信息共享给监控中心。for hystrix-dashboard
 public class ProductViewServiceFeignApplication {
 
 	public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class ProductViewServiceFeignApplication {
     	if(NetUtil.isUsableLocalPort(rabbitMQPort)) {
     		System.err.printf("未在端口%d 发现 rabbitMQ服务，请检查rabbitMQ 是否启动", rabbitMQPort );
     		System.exit(1);
-    	}		
+    	}
     	int port = 0;
     	int defaultPort = 8012;
     	Future<Integer> future = ThreadUtil.execAsync(() ->{
@@ -41,7 +41,7 @@ public class ProductViewServiceFeignApplication {
 	        	System.out.println("请于5秒钟内输入端口号, 推荐  8012 、 8013  或者  8014，超过5秒将默认使用"+defaultPort);
 	        	Scanner scanner = new Scanner(System.in);
 	            while(true) {
-	                String strPort = scanner.nextLine(); 
+	                String strPort = scanner.nextLine();
 	                if(!NumberUtil.isInteger(strPort)) {
 	                	System.err.println("只能是数字");
 	                	continue;
@@ -66,10 +66,10 @@ public class ProductViewServiceFeignApplication {
         new SpringApplicationBuilder(ProductViewServiceFeignApplication.class).properties("server.port=" + port).run(args);
 
 	}
-	
-	//在启动类里配置 Sampler 抽样策略： ALWAYS_SAMPLE 表示持续抽样
+
+	// zipkin： 在启动类里配置 Sampler 抽样策略： ALWAYS_SAMPLE 表示持续抽样
 	@Bean
 	public Sampler defaultSampler() {
 		return Sampler.ALWAYS_SAMPLE;
-	}  
+	}
 }

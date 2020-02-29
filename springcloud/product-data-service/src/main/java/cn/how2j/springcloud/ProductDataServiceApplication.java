@@ -17,7 +17,7 @@ import cn.hutool.core.util.NetUtil;
 import cn.hutool.core.util.NumberUtil;
 
 @SpringBootApplication
-@EnableEurekaClient
+@EnableEurekaClient //表示这是个 eureka 客户端。
 public class ProductDataServiceApplication {
     public static void main(String[] args) {
     	int port = 0;

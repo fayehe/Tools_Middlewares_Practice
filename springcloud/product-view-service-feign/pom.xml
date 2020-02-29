@@ -6,8 +6,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>product-view-service-feign</artifactId>
-  
-  
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -32,25 +31,24 @@
 	        <groupId>org.springframework.cloud</groupId>
 	        <artifactId>spring-cloud-starter-zipkin</artifactId>
 	    </dependency>
-	    
+
 	    <dependency> <!-- 增加一个 spring-cloud-starter-config 用于访问配置服务器 -->
 	        <groupId>org.springframework.cloud</groupId>
 	        <artifactId>spring-cloud-starter-config</artifactId>
-	    </dependency>  
-	    <dependency> <!-- 用于访问路径：/actuator/bus-refresh -->
+	    </dependency>
+
+	    <dependency> <!-- 用于访问路径：/actuator/bus-refresh 刷新总线消息-->
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-starter-actuator</artifactId>
-	    </dependency>    
+	    </dependency>
 	    <dependency> <!-- 用于支持 rabbitmq -->
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
-	    </dependency> 
-	    
+	    </dependency>
+
 	    <dependency> <!-- 增加 jar spring-cloud-starter-netflix-hystrix 以支持断路器。 -->
 	        <groupId>org.springframework.cloud</groupId>
 	        <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 	    </dependency>
-		        
-    </dependencies>  
-  
+    </dependencies>
 </project>

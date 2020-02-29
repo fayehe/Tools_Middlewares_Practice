@@ -7,6 +7,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import cn.hutool.core.util.NetUtil;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 @SpringBootApplication
 @EnableZuulProxy
 @EnableEurekaClient

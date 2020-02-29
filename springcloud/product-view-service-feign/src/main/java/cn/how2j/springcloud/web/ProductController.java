@@ -15,14 +15,15 @@ import cn.how2j.springcloud.service.ProductService;
 @RefreshScope
 public class ProductController {
 	@Autowired ProductService productService;
-	
+
+	// 通过config-server -> github里配置信息
 	@Value("${version}")
 	String version;
 	
     @RequestMapping("/products")
     public Object products(Model m) {
     	List<Product> ps = productService.listProducts();
-    	m.addAttribute("version", version);    	
+    	m.addAttribute("version", version);
     	m.addAttribute("ps", ps);
         return "products";
     }

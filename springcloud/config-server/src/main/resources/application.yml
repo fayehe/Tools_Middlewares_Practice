@@ -10,8 +10,11 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/fayehe/Tools_Middlewares_Practice
-          searchPaths: springcloud/springcloudConfig/respo
+          uri: https://github.com/how2j/springcloudConfig/
+          searchPaths: respo
+#          自己配的GitHub仓库，有时会一直拿不到
+#          uri: https://github.com/fayehe/Tools_Middlewares_Practice/
+#          searchPaths: springcloud/springcloudConfig/respo
 eureka:
   client:
     serviceUrl:

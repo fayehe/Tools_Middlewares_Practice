@@ -21,7 +21,7 @@ import cn.hutool.core.util.NumberUtil;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableDiscoveryClient //表示用于发现eureka 注册中心的微服务。
+@EnableDiscoveryClient //表示用于发现eureka 注册中心的微服务。 表示该服务可通过注册中心调用其他微服务
 public class ProductViewServiceRibbonApplication {
 
 	public static void main(String[] args) {
@@ -55,8 +55,9 @@ public class ProductViewServiceRibbonApplication {
     		System.exit(1);
     	}
         new SpringApplicationBuilder(ProductViewServiceRibbonApplication.class).properties("server.port=" + port).run(args);
-
 	}
+
+	// 用 restTemplate 这个工具来做负载均衡
     @Bean
     @LoadBalanced 
     RestTemplate restTemplate() {// 还多了个 RestTemplate，就表示用 restTemplate 这个工具来做负载均衡
